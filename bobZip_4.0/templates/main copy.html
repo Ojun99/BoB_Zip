@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/reset.css">
+    <link rel="stylesheet" href="static/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Notable&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> 
+    <title>main</title>
+</head>
+<body>
+    {%with messages = get_flashed_messages()%}
+        {%if messages %}
+            <script type="text/javascript">
+            alert("{{messages[-1]}}");
+            </script>
+        {%endif%}
+    {%endwith%}
+    <div id="wrap">
+            <header>
+                <div class="inner"> 
+                    <!-- logo -->
+                    <a class="logo" href="/">BOB.ZIP</h2>
+                        <img  src="static/logo.png" alt="logo">
+                    </a>
+                    <div class="bgGnb"></div>
+                    <nav class="gnb">
+                        <ul class="gnb_list cleargnb_list">
+                            <li class="subYes">
+                                <a href="/restaurant">서울특별시</a>
+                                <ul class="depth1">
+                                    <li><a href="/restaurant67">강서구</a></li>
+                                    <li><a href="/restaurant23">강남구</a></li>
+                                    <li><a href="/restaurant">강북구</a></li>
+                                    <li><a href="/restaurant">강동구</a></li>
+                                </ul>
+                            </li>
+                            <li class="subYes">
+                                <a href="/restaurant">인천광역시</a>
+                                <ul class="depth1">
+                                    <li><a href="/restaurant45">서구</a></li>
+                                    <li><a href="/restaurant">중구</a></li>
+                                    <li><a href="/restaurant">미추홀구</a></li>
+                                </ul>
+                            </li>
+                            <li class="subYes"><a href="/restaurant">경기도</a></li>
+                            <li class="subYes"><a href="/confirm">예약현황</a></li>
+                            <div class="shop">
+                                {% if session["user_id"] %}
+                                    <a href="/logout">로그아웃</a>
+                                    <a href="/register">회원가입</a>
+                                {% else %}
+                                    <a href="/login">로그인</a>
+                                    <a href="/register">회원가입</a>
+                                {% endif %}
+                            </div>   
+                        </ul>
+                    </nav>
+                </div>
+                <div class="depthAboutBg"></div>
+        </header>
+        {% block main %}{% endblock %}
+</body>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script src="static/index.js"></script>
+</html>

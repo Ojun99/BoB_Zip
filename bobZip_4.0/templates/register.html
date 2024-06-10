@@ -1,0 +1,22 @@
+{% extends "main copy.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+        <body>
+            <div class="register">
+            <h2>Register</h2><br>
+            <form method="post" action="/register" id="register-form">
+                <input type="text" name="username" placeholder="username"><br><br>
+                <input type="text" name="userid" placeholder="ID"><br><br>
+                <input type="password" name="password" placeholder="Password"><br><br>
+                <input type="password" name="confirmation" placeholder="Confirmation"><br><br>
+                <input type="submit" value="Register"><br>
+            </form>
+        </div>
+        </body>
+        <body style="text-align:center;" ></body>
+{% endblock %}
+

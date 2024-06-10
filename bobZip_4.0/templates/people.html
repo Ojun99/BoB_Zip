@@ -1,0 +1,46 @@
+{% extends "main copy.html" %}
+{% block main %}
+<form action="/people" method="post">
+  <div class="container">
+    <div class="side_menu">
+        <ul class="side_list">
+            <li>
+                <a href="/restaurant">서울특별시</a>
+                <ul class="side_sub_menu">
+                    <li><a href="/restaurant67">강서구</a></li>
+                    <li><a href="/restaurant">강동구</a></li>
+                    <li><a href="/restaurant">강북구</a></li>
+                    <li><a href="/restaurant23">강남구</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/restaurant">인천광역시</a>
+                <ul class="side_sub_menu">
+                    <li><a href="/restaurant45">서구</a></li>
+                    <li><a href="/restaurant">중구</a></li>
+                    <li><a href="/restaurant">미추홀구</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/restaurant">경기도</a>
+            </li>
+        </ul>
+    </div>                
+        <div class="zzz">
+          <div style="float: center; width: 1200px;">
+            <ul style="text-align: center;">
+                <p style="font-size:350%">인원 수</p>
+            </ul>
+          </div>
+          <br><br>
+          <div style="text-align: center;">
+            <p><input class="people" type="number" name="number" placeholder="인원 수"></p>
+            <p><button class="people_btn" type="submit">주문하기</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

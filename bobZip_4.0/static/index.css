@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+body {font-family: "Noto Sans KR", sans-serif; font-weight: 500; }
+#wrap {max-width: 100%; margin: 20px 60px;}
+
+/* header - inner */
+header { position: relative; height: 9.375em; padding: 1.875em;z-index: 50;}
+header .inner {margin-left: 50px;  display: flex ;max-width: 100%; line-height: 104px; color: #fff;}
+header .gnbBg {height: 300vh; /* background: #fff; */ display: none; z-index: 1;}
+
+/* logo */
+header .inner .logo{position: relative; width: 100px; display: block; color: #000; font-size: 90px; font-family: "Notable", sans-serif;font-weight: 400;font-style: normal;}
+header .inner .logo img { position: absolute; top: 30px; left:-70px ; width: 70px; z-index: -1;}
+ 
+
+/* gnb */
+header .inner .gnb { width: 54%; margin-left: 37%; color: #363636;line-height: 104px;/* position: absolute;top: 55%; left: 50%;transform: translate(-50%); width: 1000px;text-align: center; */}
+header .gnb > ul > li { position: relative; float: left; font-size: 1.363em; transition: all .4s; margin-left: 10px;}
+header .inner .gnb a {position: relative; transition: all .4s;display: block; text-align: center;/* height:30px; */}
+header .gnb .subYes  { margin-right: 30px;}
+header .gnb .subYes:hover > a::before {width: 100%;transition: all .5s;}
+
+header .gnb .subYes > a::before{content: ''; position: absolute; bottom: 30px; left: 0; width: 0; height: 1px; background: #3b3b3b;}
+header .inner .shop {width: 100%; }
+header .inner .shop a {display: inline-block; position: relative;padding: 0 14px; font-size: 15px;}
+header .inner .shop a img {filter: invert(98%) sepia(2%) saturate(0%) hue-rotate(217deg) brightness(102%) contrast(101%);}
+header .inner .shop a:after {position: absolute; top: 50%; right: 0;transform: translateY(-50%); width: 1px; height: 10px; display: inline-block;content: ''; background: #b0b0b0;}
+header .inner .shop a:last-child { text-decoration: none;}
+header .inner .shop img {width: 20px; display: inline-block;}
+
+/* depthAboutBg */
+.depthAboutBg {width: 100%; height: 50px; background: #dfdfdf; transition: all .4s; display: none;}
+
+/* header .gnb ul ul {display: none;} */
+.gnbBg { position: absolute;top: 140px; left: 0; right: 0;  background: #fff; display: none; transition: all 0.2s;}
+.gnbBg.on {height:110px}
+
+/* gnb - depth1 */
+.gnb .depth1 { position: absolute;width: 100vW; height: 50px; top: 50px; left: 0; right:0;text-align: center;display: none;}
+.gnb .depth1 li {  float: left;  width: 100px; height: 85px;}
+.gnb .depth1 li a {font-size: 17px;color: #3b3b3b;display: block; width: 100%;}
+.gnb .depth1 li:hover a {scale: 1.1; transition: all .4s;}
+
+/* side_menu */
+.container {display: flex;}
+.container .side_menu { width: 17%; height: 100vh; border-right: 1px solid #2d2a29; }
+.container .side_menu .side_list {width: 100%;}
+.container .side_menu .side_list > li {width: 100%; height: 35px; text-align: left; margin-bottom: 85%; }
+.container .side_menu .side_list > li:active a {font-weight: bold;}
+.container .side_menu .side_list > li a::before {content: "";display: inline-block;background-image: url( "../img/menu.png" );background-size: 5px 5px;width: 4px;height: 10px; margin-right: 20px; }
+.container .side_menu .side_list > li a {display: block; width: 100%;  font-size: 22px; color: #000000; margin-bottom: 15px;}
+.container .side_menu .side_list .side_sub_menu { text-indent: 8%;}
+.container .side_menu .side_list .side_sub_menu li {margin: 7px 0; }
+.container .side_menu .side_list .side_sub_menu li a {font-size: 18px; color: #3b3b3b;}
+
+/* contents */
+.contents {width: 75%;}
+.contents .food_area {width: 100%;}
+.contents .food_area > ul > li {width: 100%;}
+
+
+/* con */
+.r_aside{  color: #000; width: 1240px; height: 100%; float: right; text-align: center; } */
+section{width: auto; height: auto; background-color: rgb(87, 87, 73);float: right;}
+
+.con{ width: 800px; height: 450px; margin: 0 0 50px 186px; overflow: hidden; }
+.con2 {width: 800px; height: 200px; margin: 0 0 160px 186px; }
+.con:hover img {transition: all .5s; filter: brightness(0.7);cursor: pointer; scale: 1.1;}
+.con2 > ul {width: 50%; margin-top: 50px; border-right: 3px dotted #ccc; display: contents; }
+.con2 > ul > li {text-align: left; margin-bottom: 20px; }
+.con2 > ul > li a {display: block; width: 100%; font-family: "Noto Sans KR", sans-serif;}
+.con2 .name ,.con2 .adr {margin-left:20px ; font-size: 20px; color: #656363; position: relative; }
+.con2 .name::before ,.con2 .adr::before { content: ''; position: absolute; top: 50%; left: -17px; transform: translateY(-50%); background: #2d2a29; width: 10px; height: 10px; border-radius: 10px;}
+.con2 .name span ,.con2 .adr span {color: #000;} 
+
+
+.center {position: relative; overflow: hidden; font-weight: rgb(12, 45, 190); width: 500px;height: 300px; margin: 50px 45px; float: left; }
+.center:hover img {transition: all .5s; filter: brightness(0.4);cursor: pointer; scale: 1.1;}
+.center:hover ul {opacity: 1; transition: all .6s;}
+/* .center > ul::before {content: ''; margin-left: -20px; background: #2d2a29; width: 10px; height: 10px; border-radius: 10px; position: absolute; top: 50%; left: 0; transform: translateY(-50%);} */
+.center > ul { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) ; opacity: 0;  color: #000; font-size: 20px; width: 400px; text-align: center;}
+.center > ul > li {width: 100%; text-align: center; line-height: 50px; color: #fff; font-size: 28px; font-weight: bold ;}
+.m_side{background-color: rgb(255, 255, 255);  color: white; width: 100%; height: 100%; float: right; text-align: center; }
+.item-wrap .items .item .inner span { display: inline-block;vertical-align: middle;}
+.team {font-size: 30px; font-weight: bold;}
+
+/* button */
+.button1 { width: 100%; height: 80px; margin-top: 20px; font-size: 23px; background-color: rgb(0, 0, 0); color: white;}
+.btn_menu {width: 100%; display: flex;}
+.button2, .button3 { width: 100%; height: 80px; margin: 20px 8px 0 0 ; margin-top: 20px; font-size: 23px; background-color: rgb(0, 0, 0); color: white; width: calc(100%/2);}
+.button4 {width: 100%; position: relative; border: none; height: 60px; font-weight: bold; background: #fff; color: #000; cursor: pointer;  margin-top: 20px; font-size: 23px;}
+.button4 img { width: 30px; position: absolute; top: 50%; right: 7%; transform: translateY(-50%);}
+.button4:hover {background: #a1a1a1; color: #000; transition: all .7s;}
+.people {width: 350px; height: 40px; margin-bottom: 20px;}
+.people_btn {width: 170px;font-size: 20px;height: 50px; border: none; background: black;color: #fff;}
+/* swiper */
+.swiper {width: 100%; height: 550px;}
+
+/* review */
+.review {width: 100%; height: 300px; margin-top: 40px; padding-top: 30px; border: 2px solid #000; border-radius: 20px;}
+.review h3 {margin-bottom: 35px; font-size: 22px;}
+.review .review_area { text-align: center;}
+.review .review_area li{margin-bottom: 8px;}
+.review .review_area li a {display: block; font-size: 19px;}
+
+/* footer */
+footer {position: relative;padding: 70px 80px; background: #2d2a29; color: #fff;}
+footer .title {font-size: 65px; font-weight: 900; line-height: 1.025; margin-bottom: 40px;}
+footer .list li {margin-bottom: 0;}
+footer .list li a{ width: 470px; display: inline-block; font-size: 19px;font-weight: 600; text-align: left; padding: 30px 0;border-bottom: 1px solid #ffffff80;}
+footer img { width: 45px; position: absolute;top: 72%; right: 4%;}
+footer img { width: 60px; padding: 10px; border: 3px solid #fff; border-radius: 50%;}
+footer .b_area ul {float: left; position: absolute; top: 93%; left: 0;}
+footer .b_area .text_area li { float: left; padding-left: 80px;}
+footer .b_area .ad {display: flex; flex-direction: column; position: absolute; bottom: 0; left: 70%;}
+
+footer .b_area .ad li { float: left; padding-left: 20px;}
+

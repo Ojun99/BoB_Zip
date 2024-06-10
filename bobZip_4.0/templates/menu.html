@@ -1,0 +1,52 @@
+{% extends "main copy.html" %}
+{% block main %}
+
+<form action="/menu" method="post">
+    <div class="container">
+        <div class="side_menu">
+            <ul class="side_list">
+                <li>
+                    <a href="/restaurant">서울특별시</a>
+                    <ul class="side_sub_menu">
+                        <li><a href="/restaurant67">강서구</a></li>
+                        <li><a href="/restaurant">강동구</a></li>
+                        <li><a href="/restaurant">강북구</a></li>
+                        <li><a href="/restaurant23">강남구</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/restaurant">인천광역시</a>
+                    <ul class="side_sub_menu">
+                        <li><a href="/restaurant45">서구</a></li>
+                        <li><a href="/restaurant">중구</a></li>
+                        <li><a href="/restaurant">미추홀구</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/restaurant">경기도</a>
+                </li>
+            </ul>
+        </div>
+        <div class="m_side">
+            {% for rmenu in menu %}
+            <div class = "center">
+                <img src="{{rmenu['menuimg']}}" width="500px" height="300px">
+                <ul style="text-align: left;">
+                    <li><a href="#">{{rmenu['menu']}}</a></li>
+                    <li><a href="#">{{rmenu['price']}}원</a></li>
+                    <div class="menu_list_btn"> 
+                        <button type="submit" class="button4" value="{{rmenu['menu']}}" name = "menu">담기
+                            <img src="/static/cart1.png" alt="cart">
+                        </button> 
+                    </div>
+                </ul>
+            </div>
+            {%endfor%}
+            <div class="btn_menu">
+                <button type="submit" class="button3" name = "r_id">이전으로</button>
+                <button type="submit" class="button2" name = "total">예약하기</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "main copy.html" %}
+{% block main %}
+    <div class="container">
+        <div class="side_menu">
+            <ul class="side_list">
+                <li>
+                    <a href="/restaurant">서울특별시</a>
+                    <ul class="side_sub_menu">
+                        <li><a href="/restaurant67">강서구</a></li>
+                        <li><a href="/restaurant">강동구</a></li>
+                        <li><a href="/restaurant">강북구</a></li>
+                        <li><a href="/restaurant23">강남구</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/restaurant">인천광역시</a>
+                    <ul class="side_sub_menu">
+                        <li><a href="/restaurant45">서구</a></li>
+                        <li><a href="/restaurant">중구</a></li>
+                        <li><a href="/restaurant">미추홀구</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/restaurant">경기도</a>
+                </li>
+            </ul>
+        </div>
+        
+        <br><br><br>                     
+            <div class="ccc">
+                <div style="float: center; width: 1300px;" >
+                    <ul style="text-align: center;">
+                        <p style="font-size:400%; text-align: center; width: 1400px;">예약이 완료되었습니다.</p>
+                    </ul>
+                </div>
+                <br><br><br>
+                <ul style="text-align: center; float: center;">       
+                    <h2 style=" float: center; width: 1380px;">
+                        예약자명 : {{order_name[0]["username"]}}<br></br>
+                        예약인원 : {{order_team[0]["team"]}}명<br></br> 
+                        예약메뉴 : {{menu_total[0]["group_concat(u_order.o_food)"]}}<br></br>
+                        총  합계 : {{menu_total_price[0]["주문총합"]}}원<br></br>
+                        ===========================<br></br>
+                        대기번호: 901번 
+                    </h2>        
+                </ul>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "main copy.html" %}
+{% block title %}
+    restaurant 
+{% endblock %}
+{% block main %}
+<form action="/count" method="post">
+    <div class="container">
+        <div class="side_menu">
+            <ul class="side_list">
+                <li>
+                    <a href="/restaurant">서울특별시</a>
+                    <ul class="side_sub_menu">
+                        <li><a href="/restaurant67">강서구</a></li>
+                        <li><a href="/restaurant">강동구</a></li>
+                        <li><a href="/restaurant">강북구</a></li>
+                        <li><a href="/restaurant23">강남구</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/restaurant">인천광역시</a>
+                    <ul class="side_sub_menu">
+                        <li><a href="/restaurant45">서구</a></li>
+                        <li><a href="/restaurant">중구</a></li>
+                        <li><a href="/restaurant">미추홀구</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/restaurant">경기도</a>
+                </li>
+            </ul>
+        </div>
+        <div class="r_aside">
+            {% for menu in rows %}
+                <div class = "con">
+                    <img src="{{menu['img']}}" width="800px" height="450px">
+                </div>
+                <div class="con2">
+                    <ul style="text-align: left;">
+                        <li class="name" ><a href="#"><span>업체명 :</span> {{menu['rname']}}</a></li>
+                        <li class="adr"><a href="#"><span>주소 :</span> {{menu['address']}}</a></li>
+                        <li class="team"><a href="#" >총 대기 팀수 : N 팀</a></li>
+                        <button type="submit" class="button1" value="{{menu['id']}}" name = "r_id">예약하기</button>
+                    </ul>
+                </div>
+            {%endfor%}
+        </div>   
+    </div>
+</form>
+
+{% endblock %}
