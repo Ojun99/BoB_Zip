@@ -1,5 +1,4 @@
-# BoB_Zip 
-RECA6_Python_Project
+<h1>RECA6_Python_Project</h1>
 
 2024/05/22 ~ 2024/05/26
 
