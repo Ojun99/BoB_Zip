@@ -4,7 +4,7 @@
 
 팀원 : 김준혁 이다운 신인아
 
-python sqlite jinja 등 강의 때 배운 스킬만 활용하여 웹 페이지 구축
+python sqlite jinja 등 강의 때 배운 스킬 활용하여 웹 페이지 구축
 
 python -m venv test
 
